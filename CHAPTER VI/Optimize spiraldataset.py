@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import nnfs
 import numpy as np
-from nnfs.datasets import vertical_data
+from nnfs.datasets import spiral_data
 
 nnfs.init()
 class Layer_Dense:
@@ -37,7 +37,7 @@ class Loss_CategoricalCrossentropy(Loss):
     
 
 
-X, y = vertical_data(samples=100, classes=3)
+X, y = spiral_data(samples=100, classes=3)
 
 dense1 = Layer_Dense(2,3)
 activation1 = Activation_ReLU()
